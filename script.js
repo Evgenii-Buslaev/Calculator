@@ -80,15 +80,14 @@ class Calculator {
       this.currentOperand
     );
     if (this.operation != null) {
-      this.previuosOperandTextElement.innerText = `${this.getDisplayNumber(
+      this.previousOperandTextElement.innerText = `${this.getDisplayNumber(
         this.previousOperand
       )} ${this.operation}`;
     } else {
-      this.previuosOperandTextElement.innerText = "";
+      this.previousOperandTextElement.innerText = "";
     }
   }
 }
-
 const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalsButton = document.querySelector("[data-equals]");
