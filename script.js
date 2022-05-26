@@ -51,7 +51,12 @@ class Calculator {
       default:
         return;
     }
-    this.currentOperand = computation;
+    if (Number.isInteger(prev) && Number.isInteger(current)) {
+      this.currentOperand = computation;
+    } else {
+      this.currentOperand = computation.toFixed(5);
+    }
+
     this.operation = undefined;
     this.previousOperand = "";
   }
